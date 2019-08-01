@@ -16,6 +16,6 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => {
-    return {handleVideoListEntryTitleClick: () => (dispatch(changeVideo))}
+    return {handleVideoListEntryTitleClick: (e) => (dispatch(changeVideo(e)))}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(VideoListContainer);
