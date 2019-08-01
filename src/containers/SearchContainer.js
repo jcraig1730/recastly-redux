@@ -6,7 +6,9 @@ import React from 'react';
 var SearchContainer = (props) => {
     console.log(props)
     return (
-        <Search value={props.query}  handleSearchInputChange={props.handleSearchInputChange}/>
+        <Search value={props.query}  handleSearchInputChange={props.handleSearchInputChange}
+        handleYouTubeVideos={props.handleSearchInputChange}/>
+
     )
 };
 

@@ -3,7 +3,7 @@ import VideoList from './../components/VideoList.js';
 import changeVideo from './../actions/currentVideo.js';
 import React from 'react';
 
-var VideoListContainer = ({VideoList, handleVideoListEntryTitleClick}) => {
+var VideoListContainer = ({videos, handleVideoListEntryTitleClick}) => {
     return (
         <VideoList videos={videos} handleVideoListEntryTitleClick={handleVideoListEntryTitleClick}/>
     )
