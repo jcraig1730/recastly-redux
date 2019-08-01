@@ -1,13 +1,15 @@
 import { connect } from 'react-redux';
 import Search from './../components/Search.js';
 import handleSearchChange from '../actions/search.js';
+import React from 'react';
 
 var SearchContainer = (props) => {
     console.log(props)
     return (
-        <Search value={props.query} onChange={props.onChangeQuery} onSubmit={props.handleSearchChange}/>
+        <Search value={props.query}  handleSearchInputChange={props.handleSearchInputChange}/>
     )
 };
+
 
 const mapStateToProps = (state) => {
     console.log(state)
@@ -16,7 +18,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        handleSearchChange: () => (dispatch(handleSearchChange))
+        handleSearchInputChange: () => (dispatch(handleSearchChange()))
     }
 }
 
