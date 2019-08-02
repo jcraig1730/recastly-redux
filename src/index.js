@@ -9,7 +9,7 @@ import store from './store/store.js';
 import { Provider } from 'react-redux';
 //TODO: Use the Provider component to make your store available to
 //  the rest of your app.
-console.log(store)
+
 ReactDOM.render(
   <Provider store={store}>
     <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />

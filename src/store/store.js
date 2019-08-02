@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './../reducers/main.js';
 import exampleVideoData from '../data/exampleVideoData.js';
@@ -7,12 +7,13 @@ import exampleVideoData from '../data/exampleVideoData.js';
 const initialState = {
     videoList: exampleVideoData,
     currentVideo: null,
+    autoplay: 0
     //query: 'Angular',
     //video: exampleVideoData[0]
 };
 
 const middleware = [thunk];
 
-const store = createStore(rootReducer, initialState, applyMiddleware(...middleware));
+const store = createStore(rootReducer, initialState, compose(applyMiddleware(...middleware), window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
 
 export default store;

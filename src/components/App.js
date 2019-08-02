@@ -7,6 +7,7 @@ import VideoPlayerContainer from '../containers/VideoPlayerContainer.js';
 import SearchContainer from '../containers/SearchContainer.js';
 import searchYouTube from '../lib/searchYouTube.js';
 import { connect } from 'react-redux';
+import VideoDetailsContainer from '../containers/VideoDetailsContainer.js';
 
 import handleVideoSearch from '../actions/search.js'
 
@@ -60,6 +61,7 @@ class App extends React.Component {
           <div className="col-md-7">
             {/* <VideoPlayer video={this.state.currentVideo}/> */}
             <VideoPlayerContainer />
+            <VideoDetailsContainer/>
           </div>
           <div className="col-md-5">
             {/* <VideoList

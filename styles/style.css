@@ -45,6 +45,10 @@ body {
   margin-top: 10px;
 }
 
+.video-details ul li {
+  list-style: none;
+}
+
 .video-list {
   background: #fff;
   padding: 8px;
